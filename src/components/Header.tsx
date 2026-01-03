@@ -24,7 +24,7 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
           <div className="flex items-center cursor-pointer" onClick={() => onNavigate('home')}>
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
               <img
-                src="../ShahLogo.jpg"
+                src="/ShahLogo.jpg"
                 alt="Shah Cyber Tech Zone Logo"
                 className="w-full h-full object-contain"
               />
