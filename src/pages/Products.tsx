@@ -20,14 +20,14 @@ export default function Products() {
       icon: Smartphone,
       name: 'Phone Cases',
       description: 'Protective cases in various styles for iPhone, Samsung, and more',
-      types: ['Slim Cases', 'Rugged', 'Leather', 'Clear Cases'],
+      types: ['Slim Cases', 'Ring Cases', 'Leather', 'Clear Cases'],
       color: 'from-violet-500 to-purple-500',
     },
     {
       icon: Shield,
       name: 'Tempered Glass',
       description: 'Premium screen protectors with 9H hardness and anti-fingerprint coating',
-      types: ['Privacy Glass', 'Anti-Glare', 'Full Coverage', 'Standard'],
+      types: ['Privacy Glass', 'Full Glue', 'Standard'],
       color: 'from-purple-500 to-pink-500',
     },
     {
@@ -55,7 +55,7 @@ export default function Products() {
       icon: Plug2,
       name: 'Tourist Adapters',
       description: 'Universal travel adapters compatible with outlets worldwide',
-      types: ['Universal', 'USA/EU', 'UK Type', 'Multi-Country'],
+      types: ['Universal', 'EU', 'UK Type', 'Multi-Country'],
       color: 'from-yellow-500 to-green-500',
     },
     {
@@ -83,7 +83,7 @@ export default function Products() {
       icon: Keyboard,
       name: 'Laptop Accessories',
       description: 'Cooling pads, laptop stands, and protective sleeves',
-      types: ['Cooling Pad', 'Laptop Stand', 'Sleeves', 'Docking Station'],
+      types: ['Cooling Pad', 'Laptop Stand', 'Sleeves', 'Laptop Bag'],
       color: 'from-blue-500 to-indigo-500',
     },
   ];
