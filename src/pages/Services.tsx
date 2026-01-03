@@ -163,13 +163,13 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+15551234567"
+                href="tel:+442034892446"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Call Us: +1 (555) 123-4567
+                Call Us: 020 3489 2446
               </a>
               <a
-                href="https://wa.me/15551234567"
+                href="https://wa.me/+447867777311"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors"

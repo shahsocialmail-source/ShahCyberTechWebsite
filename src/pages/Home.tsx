@@ -47,7 +47,7 @@ export default function Home({ onNavigate }: HomeProps) {
     {
       icon: CheckCircle,
       title: 'Warranty Included',
-      description: '90-day warranty on all repairs',
+      description: 'Warranty available on repairs',
     },
   ];
 

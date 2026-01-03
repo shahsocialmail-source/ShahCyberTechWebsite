@@ -192,7 +192,7 @@ export default function About() {
             Join thousands of satisfied customers who trust Shah Cyber Tech Zone for their repair needs
           </p>
           <a
-            href="https://wa.me/15551234567"
+            href="tel:+442034892446"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-700 transition-colors"

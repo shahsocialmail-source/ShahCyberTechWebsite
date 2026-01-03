@@ -192,7 +192,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="https://wa.me/07867777311"
+                    href="https://wa.me/+447867777311"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg hover:shadow-md transition-all group"
@@ -248,6 +248,25 @@ export default function Contact() {
       </section>
 
       <section className="py-16 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gray-100 rounded-xl overflow-hidden" style={{ height: "400px" }}>
+              <div className="w-full h-full">
+                <iframe
+                  title="Shah Cyber Tech Zone Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.565781140428!2d-0.051203023871585!3d51.521181809697076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cd66b7f6e1b%3A0x3c4a4163cdff4326!2sShah%20Cyber%20Tech%20%26%20Internet%20Cafe!5e0!3m2!1sen!2suk!4v1767474896203!5m2!1sen!2suk"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </div>
+          </div>
+      </section>
+
+      {/* <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gray-100 rounded-xl overflow-hidden" style={{ height: '400px' }}>
             <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
@@ -259,7 +278,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

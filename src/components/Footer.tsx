@@ -12,7 +12,11 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div>
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-xl">SC</span>
+                <img
+                  src="../ShahLogo.jpg"
+                  alt="Shah Cyber Tech Zone Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h3 className="text-white font-bold text-lg">Shah Cyber Tech Zone</h3>
@@ -59,7 +63,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1FJCFfhs4x/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-600 transition-colors"
@@ -75,7 +79,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://wa.me/07867777311"
+                href="https://wa.me/+447867777311"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-600 transition-colors"
@@ -88,7 +92,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Shah Cyber Tech Zone. All rights reserved.
+            &copy; {new Date().getFullYear()} Rezuan & Shah Cyber Tech Zone. All rights reserved.
           </p>
         </div>
       </div>

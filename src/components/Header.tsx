@@ -23,7 +23,11 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center cursor-pointer" onClick={() => onNavigate('home')}>
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-xl">SC</span>
+              <img
+                src="../ShahLogo.jpg"
+                alt="Shah Cyber Tech Zone Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-800">Shah Cyber Tech Zone</h1>
