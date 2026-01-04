@@ -34,7 +34,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['180 Mile End Road, Stepney Green', 'London, E1 4LJ'],
+      details: ['182 Mile End Road, Stepney Green', 'London, E1 4LJ'],
     },
     {
       icon: Phone,
