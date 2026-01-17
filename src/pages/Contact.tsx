@@ -247,6 +247,31 @@ export default function Contact() {
         </div>
       </section>
 
+
+
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+  
+            <div className="lg:col-span-3 overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="/shopFront.jpeg" 
+                alt="Our Shop"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            <div className="lg:col-span-3">
+              <h2 className="flex items-center justify-center text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+                Visit Our Shop
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
       <section className="py-16 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-100 rounded-xl overflow-hidden" style={{ height: "400px" }}>

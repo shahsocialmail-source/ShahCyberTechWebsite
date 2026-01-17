@@ -177,6 +177,45 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
+
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+            
+            {/* Image — 2/3 width */}
+            <div className="lg:col-span-2 overflow-hidden rounded-2xl shadow-xl">
+              <img
+                src="/shopFront.jpeg" //
+                alt="Our Shop"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+
+            {/* Text — 1/3 width */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+                Visit Our Shop
+              </h2>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Visit our store for professional repairs, passport photos, printing,
+                DHL services, and cyber cafe facilities — all in one place.
+              </p>
+
+              <ul className="space-y-3 text-gray-700">
+                <li>• Walk-in service available</li>
+                <li>• Fast turnaround time</li>
+                <li>• Certified technicians</li>
+                <li>• Friendly local service</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+
       <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Fix Your Device?</h2>
@@ -191,6 +230,93 @@ export default function Home({ onNavigate }: HomeProps) {
           </button>
         </div>
       </section>
+
+
+
+
+
+
+
+
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+
+            {/* Heading */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3">
+                Customer Reviews
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                What our customers say about our services
+              </p>
+            </div>
+
+            {/* Reviews */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              
+              {/* Review Card */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+                <div className="flex items-center gap-1 mb-3">
+                  ★★★★★
+                </div>
+                <p className="text-gray-600 mb-4">
+                  “I have replaced my Samsung s23 ultra screen from them. My screen was completely broken. They fixed it very quickly and the screen quality is really good. And thanks to the repair man rezuan for fixing this perfectly.
+I can definitely suggested this shop for any phone and laptop repair.
+I also saw many gadget and accessories for mobile phones and computers, can check out guys.”
+                </p>
+                <h4 className="font-semibold text-gray-800">Arthur Roy Begumisa</h4>
+                <span className="text-sm text-gray-500">Screen Repair</span>
+              </div>
+
+              
+
+              {/* Review Card */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+                <div className="flex items-center gap-1 mb-3">
+                  ★★★★★
+                </div>
+                <p className="text-gray-600 mb-4">
+                  “I recently bought a wireless keyboard suggested by Sajon Bhai from Shah Cybertech, and I couldn’t be happier with my experience! The product quality is excellent. The staff was knowledgeable, friendly, and helped me choose the right model for my needs. Pricing was very fair, and the overall service was fast and professional.
+Highly recommended for anyone looking for genuine tech products and top-notch customer service. I’ll definitely be coming back for future purchases!”
+                </p>
+                <h4 className="font-semibold text-gray-800">Siyana Choudhury</h4>
+                <span className="text-sm text-gray-500">Keyboard</span>
+              </div>
+
+
+              {/* Review Card */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition">
+                <div className="flex items-center gap-1 mb-3">
+                  ★★★★★
+                </div>
+                <p className="text-gray-600 mb-4">
+                  “One of the best shop in east London for any service or anything .they give you fair price and they make it onspot if you ask . My man Ryan he gave me very good deal for both laptop and my mobile service they did it in a hour.”
+                </p>
+                <h4 className="font-semibold text-gray-800">Vijay Sai Kiran Siripurapu</h4>
+                <span className="text-sm text-gray-500">iPhone & Laptop Repair</span>
+              </div>
+
+            </div>
+
+            {/* CTA */}
+            <div className="mt-12 text-center">
+              <a
+                href="https://wa.me/+447867777311"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:opacity-95 transition"
+              >
+                Leave Us a Review
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+
+
+
+      
     </div>
   );
 }

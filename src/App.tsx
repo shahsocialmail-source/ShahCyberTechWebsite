@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import OtherServices from './pages/OtherServices';
 import Products from './pages/Products';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -27,6 +28,8 @@ function App() {
         return <Home onNavigate={handleNavigate} />;
       case 'services':
         return <Services />;
+      case 'otherServices':
+        return <OtherServices />;
       case 'products':
         return <Products />;
       case 'about':
