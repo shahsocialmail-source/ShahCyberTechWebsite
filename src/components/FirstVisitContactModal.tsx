@@ -91,8 +91,28 @@ export default function FirstVisitContactModal() {
       // ✅ Option 1 (recommended): set VITE_CONTACT_ENDPOINT in .env (Formspree / your backend)
       const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined;
 
-      if (endpoint) {
+      if (endpoint) { 
         const res = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            phone: `${form.countryCode}${form.phone}`.replace(/\s+/g, ""), // FULL phone
+            message: form.message,
+            source: "popup",
+            createdAt: new Date().toISOString(),
+
+            // optional extras (if you want)
+            countryCode: form.countryCode,
+            phoneLocal: form.phone,
+        }),
+        });
+        
+ /*       const res = await fetch(endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -101,7 +121,7 @@ export default function FirstVisitContactModal() {
             source: "popup",
             createdAt: new Date().toISOString(),
           }),
-        });
+        }); */
 
         if (!res.ok) throw new Error("Request failed");
       } else {
