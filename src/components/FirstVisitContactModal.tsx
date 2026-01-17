@@ -9,8 +9,6 @@ type FormState = {
   message: string;
 };
 
-const STORAGE_KEY = "shahcybertech_contact_popup_seen_v1";
-
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -31,18 +29,10 @@ export default function FirstVisitContactModal() {
   const nameRef = useRef<HTMLInputElement | null>(null);
 
   // Open only on first visit
-  useEffect(() => {
-    try {
-      const seen = localStorage.getItem(STORAGE_KEY);
-      if (!seen) {
-        // small delay feels nicer than instantly flashing
-        setTimeout(() => setOpen(true), 500);
-      }
-    } catch {
-      // if localStorage blocked, still show once
-      setOpen(true);
-    }
-  }, []);
+    useEffect(() => {
+    setTimeout(() => setOpen(true), 500);
+    }, []);
+
 
   // Lock body scroll + focus first field
   useEffect(() => {
@@ -65,10 +55,6 @@ export default function FirstVisitContactModal() {
 
   function close() {
     setOpen(false);
-    try {
-      localStorage.setItem(STORAGE_KEY, "1");
-    } catch {
-      // ignore
     }
   }
 
