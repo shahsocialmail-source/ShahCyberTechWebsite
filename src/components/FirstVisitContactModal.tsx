@@ -56,7 +56,7 @@ export default function FirstVisitContactModal() {
   function close() {
     setOpen(false);
     }
-  }
+
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setForm((prev) => ({ ...prev, [key]: value }));
