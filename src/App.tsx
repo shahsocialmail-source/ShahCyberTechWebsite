@@ -7,6 +7,8 @@ import OtherServices from './pages/OtherServices';
 import Products from './pages/Products';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import FirstVisitContactModal from "./components/FirstVisitContactModal";
+
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -43,11 +45,15 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+
+      <FirstVisitContactModal />
+
       <Header currentPage={currentPage} onNavigate={handleNavigate} />
       <main>{renderPage()}</main>
       <Footer onNavigate={handleNavigate} />
     </div>
   );
+
 }
 
 export default App;

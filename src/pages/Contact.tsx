@@ -17,6 +17,46 @@ export default function Contact() {
     });
   };
 
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  setIsSubmitting(true);
+  setIsSubmitted(false);
+
+  try {
+    const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined;
+    if (!endpoint) throw new Error("Missing VITE_CONTACT_ENDPOINT in .env");
+
+    const res = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            source: "contact-page",
+            createdAt: new Date().toISOString(),
+          }),
+        });
+
+        if (!res.ok) throw new Error("Submit failed");
+
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", message: "" }); // optional reset
+      } catch (err) {
+        console.error(err);
+        alert("Failed to send message. Please try again.");
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
+
+  /*
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -28,7 +68,7 @@ export default function Contact() {
     setFormData({ name: '', email: '', message: '' });
 
     setTimeout(() => setIsSubmitted(false), 5000);
-  };
+  }; */
 
   const contactInfo = [
     {
@@ -85,6 +125,104 @@ export default function Contact() {
             ))}
           </div>
 
+
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h2 className="text-2xl font-bold text-gray-800 mb-2">Send Us a Message</h2>
+              <p className="text-gray-600 mb-6">
+                Fill out the form below and we&apos;ll get back to you as soon as possible
+              </p>
+
+              {isSubmitted && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-center">
+                  <CheckCircle size={20} className="text-green-600 mr-3 flex-shrink-0" />
+                  <p className="text-green-800 text-sm">
+                    Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.
+                  </p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit}>
+                <div className="mb-4">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none"
+                    placeholder="John Doe"
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Your Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none"
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Your Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all outline-none resize-none"
+                    placeholder="Tell us about your device issue or inquiry..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send size={20} className="mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </button>
+
+                <p className="mt-4 text-xs text-gray-500 text-center">
+                  By sending, you agree to be contacted regarding your enquiry.
+                </p>
+              </form>
+            </div>
+
+
+
+
+
+
+{/*
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-2">Send Us a Message</h2>
@@ -170,6 +308,9 @@ export default function Contact() {
               </form>
             </div>
 
+
+
+*/}
             <div>
               <div className="bg-white rounded-xl shadow-lg p-8 mb-6">
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Quick Contact</h2>
