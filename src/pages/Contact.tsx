@@ -79,7 +79,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['Telephone: 020 3489 2446', 'WhatsApp: +44 7867777311'],
+      details: ['Telephone: 020 3489 2446', 'WhatsApp: +44 7777394151'],
     },
     {
       icon: Mail,
@@ -333,7 +333,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="https://wa.me/+447867777311"
+                    href="https://wa.me/+447777394151"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg hover:shadow-md transition-all group"
@@ -343,7 +343,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <div className="text-sm text-gray-600">WhatsApp us</div>
-                      <div className="text-lg font-semibold text-gray-800">07867777311</div>
+                      <div className="text-lg font-semibold text-gray-800">07777394151</div>
                     </div>
                   </a>
 
