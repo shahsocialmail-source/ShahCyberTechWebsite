@@ -89,7 +89,7 @@ export default function Contact() {
     {
       icon: Clock,
       title: 'Working Hours',
-      details: ['Mon - Fri: 9:00 AM - 10:00 PM', 'Sat - Sun: 10:00AM - 10:00PM'],
+      details: ['Mon - Fri: 9:00 AM - 11:00 PM', 'Sat - Sun: 10:00AM - 10:00PM'],
     },
   ];
 
@@ -377,7 +377,7 @@ export default function Contact() {
                     <Clock size={20} className="mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Business Hours</p>
-                      <p className="text-cyan-50 text-sm">Mon - Fri: 9:00 AM - 10:00 PM</p>
+                      <p className="text-cyan-50 text-sm">Mon - Fri: 9:00 AM - 11:00 PM</p>
                       <p className="text-cyan-50 text-sm">Sat - Sun: 10:00 AM - 10:00 PM</p>
                     </div>
                   </div>
