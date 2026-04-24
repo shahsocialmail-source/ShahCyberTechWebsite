@@ -79,7 +79,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://wa.me/+447867777311"
+                href="https://wa.me/+447777394151"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-cyan-600 transition-colors"
